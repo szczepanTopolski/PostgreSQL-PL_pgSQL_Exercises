@@ -4,7 +4,7 @@ create table CURRENCY (
 );
 insert into CURRENCY (name) values ('EUR');
 insert into CURRENCY (name) values ('PHP');
-insert into CURRENCY (name)) values ('SEK');
+insert into CURRENCY (name) values ('SEK');
 insert into CURRENCY (name) values ('CZK');
 insert into CURRENCY (name) values ('PLN');
 insert into CURRENCY (name) values ('USD');

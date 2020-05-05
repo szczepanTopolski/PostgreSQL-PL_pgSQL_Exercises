@@ -2,7 +2,9 @@ create table EXCHANGE_RATE (
 	base_currency_id INT,
 	target_currency_id INT,
 	rate DECIMAL(3,2),
-	date DATE
+	date DATE,
+	FOREIGN KEY (base_currency_id) REFERENCES CURRENCY (id),
+    FOREIGN KEY (target_currency_id) REFERENCES CURRENCY (id)
 );
 insert into EXCHANGE_RATE (base_currency_id, target_currency_id, rate, date) values (1, 5, 3.1, '8/27/2019');
 insert into EXCHANGE_RATE (base_currency_id, target_currency_id, rate, date) values (1, 7, 2.82, '3/25/2020');
