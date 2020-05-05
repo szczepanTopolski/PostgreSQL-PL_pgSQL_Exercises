@@ -4,7 +4,10 @@ create table ACCOUNT (
 	balance INT,
 	accout_type_id INT,
 	IBAN VARCHAR(50),
-	currency_id INT
+	currency_id INT,
+	FOREIGN KEY (user_id) REFERENCES CLIENT (id),
+	FOREIGN KEY (accout_type_id) REFERENCES ACCOUNT_TYPE (id),
+	FOREIGN KEY (currency_id) REFERENCES CURRENCY (id)
 );
 insert into ACCOUNT (user_id, balance, accout_type_id, IBAN, currency_id) values (4011, 3596449, 1, 'LV23 VCZP ITXH VVAB KGSQ I', 6);
 insert into ACCOUNT (user_id, balance, accout_type_id, IBAN, currency_id) values (8828, 6229161, 2, 'FR48 1429 6700 11SA ZJ4M YSC2 G44', 4);
