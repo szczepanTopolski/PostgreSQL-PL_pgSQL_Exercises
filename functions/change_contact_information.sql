@@ -1,24 +1,7 @@
-CREATE OR REPLACE FUNCTION get_address_id(zip_code TEXT, city TEXT, street TEXT, local_number TEXT) RETURNS INTEGER AS $$
-DECLARE
-address_id INTEGER;
+CREATE OR REPLACE PROCEDURE change_contact_information(client_id INTEGER, phone TEXT, code TEXT, city_name TEXT, street_name TEXT, local_number_value TEXT) AS $$
 BEGIN
-	SELECT a.id INTO address_id FROM ADDRESS as a WHERE a.zip_code = zip_code AND a.city = city AND a.street = street AND a.local_number = local_number;
-	return address_id;
-END $$
-LANGUAGE plpgsql;
-
-
-CREATE OR REPLACE PROCEDURE change_contact_information((client_id INTEGER, phone_number TEXT, zip_code TEXT, city TEXT, street TEXT, local_number TEXT) AS $$
-DECLARE
-address_id INTEGER;
-BEGIN
-    INSERT INTO ADDRESS (zip_code, city, street, local_number) VALUES (zip_code, city, street, local_number);
-    address_id := get_address_id(zip_code, city, street, local_number);
-	UPDATE CLIENT SET CLIENT.phone_number = phone_number WHERE CLIENT.id = client_id;
-	UPDATE CLIENT SET CLIENT.address_id = address_id WHERE CLIENT.id = client_id;
+    UPDATE ADDRESS SET zip_code = code, city = city_name, street = street_name, local_number = local_number_value WHERE id = (SELECT address_id FROM CLIENT WHERE  id = client_id);
+	UPDATE CLIENT SET phone_number = phone WHERE id = client_id;
     COMMIT;
  END $$
  LANGUAGE plpgsql;
-
-
-
