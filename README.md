@@ -4,16 +4,17 @@
 
 - [About](#about)
 - [Installing](#installing)
+- [Run](#run)
 - [Usage](#usage)
 
 ## About <a name = "about"></a>
 
 DISCLAIMER! - IT'S NOT REAL BANK DBMS :)
 
-Project created in PostgreSQL for codecool. We have practiced advanced SQL commends and 
+Project created in PostgreSQL for codecool. We have practiced advanced SQL commands and 
 moving part of bussines logic and responsibilities to database side.
 Futhermore for the first time we were operating on such large amount of data.
-We applied around 100k rows to our bank database to train optimalization. 
+We applied approximately 100k rows to our bank database to train optimalization. 
 We have used [PL/pgSQL](https://www.postgresql.org/docs/9.3/plpgsql.html) which is procedural language for SQL. 
 
 
@@ -29,6 +30,24 @@ To install postgresql on windows use:
 
 [Postgresql Windows Download](https://www.postgresql.org/download/windows/)
 
+
+### Run <a name = "run"></a>
+
+To check functionalites you must initialize our database in postgres server
+
+Run if you have created your own server
+
+```
+psql -U userName -d databaseName -a -f 'C:\yourPATH\SQL_ADVANCED_CCBANK\backupinserts\INIT.sql'
+```
+
+or use our cloud azure one, and run:
+
+```
+psql "host=codecool.postgres.database.azure.com port=5432 dbname=postgres user=fajnyCodecooler@codecool password=itsAFeature30k sslmode=allow"
+```
+
+You can run functions and procedures using terminal or GUI such as PgADMIN :)
 
 ## Usage <a name = "usage"></a>
 
