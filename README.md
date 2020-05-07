@@ -6,6 +6,7 @@
 - [Installing](#installing)
 - [Run](#run)
 - [Usage](#usage)
+- [Presentation](#presentation)
 
 ## About <a name = "about"></a>
 
@@ -70,3 +71,6 @@ You can run functions and procedures using terminal or GUI such as PgADMIN :)
 - Show average amount of a transfer in given currency and month
 - Show sum of all transfers in given currency and month
 
+##### We invite you to see our presentation <a name = "presentation"></a>
+
+[Coolbank](https://1drv.ms/p/s!AsXGRL0aZrMDgVYMSmvgwHG47bHK?e=3uf0Ng)
