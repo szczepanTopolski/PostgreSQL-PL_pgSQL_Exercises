@@ -33,7 +33,7 @@ To install postgresql on windows use:
 
 ### Run <a name = "run"></a>
 
-To check functionalites you must initialize our database in postgres server
+To check functionalities you must initialize our database in postgres server
 
 Run if you have created your own server
 
