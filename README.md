@@ -30,7 +30,7 @@ To install postgresql on windows use:
 
 [Postgresql Windows Download](https://www.postgresql.org/download/windows/)
 
-#### IMPORTANT! 
+##### IMPORTANT! 
 
 Part of our database functionalities works only with version 11.0 and higher 
 (12.0 and RELEASE is the safest).
@@ -42,7 +42,7 @@ To check functionalities you must initialize our database in postgres server
 Run if you have created your own server
 
 ```
-psql -U userName -d databaseName -a -f 'C:\yourPATH\SQL_ADVANCED_CCBANK\backupinserts\INIT.sql'
+psql -U userName -d databaseName -a -f C:\yourPATH\SQL_ADVANCED_CCBANK\backupinserts\INIT.sql
 ```
 
 or use our cloud azure one, and run:
@@ -50,6 +50,8 @@ or use our cloud azure one, and run:
 ```
 psql "host=codecool.postgres.database.azure.com port=5432 dbname=postgres user=fajnyCodecooler@codecool password=itsAFeature30k sslmode=allow"
 ```
+
+Initialization might take a while :)
 
 You can run functions and procedures using terminal or GUI such as PgADMIN :)
 
