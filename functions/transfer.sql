@@ -1,8 +1,9 @@
 CREATE OR REPLACE PROCEDURE transfer(id_from INTEGER, id_target INTEGER, amount INTEGER) AS $$
 DECLARE 
 from_currency INTEGER;
- target_currency INTEGER; 
- charge_amount INTEGER;
+target_currency INTEGER;
+charge_amount INTEGER;
+user_balance INTEGER;
 BEGIN 
     from_currency := find_currency(id_from);
     target_currency := find_currency(id_target);
