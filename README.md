@@ -30,6 +30,10 @@ To install postgresql on windows use:
 
 [Postgresql Windows Download](https://www.postgresql.org/download/windows/)
 
+#### IMPORTANT! 
+
+Part of our database functionalities works only with version 11.0 and higher 
+(12.0 and RELEASE is the safest).
 
 ### Run <a name = "run"></a>
 
